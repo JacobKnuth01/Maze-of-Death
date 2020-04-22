@@ -16,6 +16,8 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
+        // THIS IS A TEST COMMIT (AND PUSH)
+        
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
