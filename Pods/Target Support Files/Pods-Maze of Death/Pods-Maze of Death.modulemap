@@ -1,0 +1,6 @@
+framework module Pods_Maze_of_Death {
+  umbrella header "Pods-Maze of Death-umbrella.h"
+
+  export *
+  module * { export * }
+}
