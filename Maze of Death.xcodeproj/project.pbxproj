@@ -85,6 +85,7 @@
 				A8F7A7682450A7BF008334C4 /* Assets.xcassets */,
 				A8F7A76A2450A7BF008334C4 /* LaunchScreen.storyboard */,
 				A8F7A76D2450A7BF008334C4 /* Info.plist */,
+				780566A524533FFD00A3943D /* MazeGenerator.swift */,
 			);
 			path = "Maze of Death";
 			sourceTree = "<group>";
@@ -213,6 +214,7 @@
 			files = (
 				A8F7A7622450A7BC008334C4 /* GameScene.swift in Sources */,
 				A8F7A7642450A7BC008334C4 /* GameViewController.swift in Sources */,
+				780566A624533FFD00A3943D /* MazeGenerator.swift in Sources */,
 				A8F7A75C2450A7BC008334C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
