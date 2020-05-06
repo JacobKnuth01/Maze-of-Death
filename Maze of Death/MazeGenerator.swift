@@ -18,10 +18,11 @@ class MazeGenerator {
     private let xDirs = [1, -1, 0, 0]
     private let yDirs = [0, 0, 1, -1]
     
-    func generateMaze(width: Int, height:Int, startX: Int, startY: Int) -> [[Bool]] {
+    func generateMaze(width: Int, height: Int, centerSize: Int) -> [[Bool]] {
         var maze = fillMaze(width: width, height: height)
-        maze = createPath(maze: maze, x: startX, y: startY)
-        return createStartAndEnd(maze: maze)
+        maze = createCenter(maze: maze, centerSize: centerSize)
+        maze = createPath(maze, maze.count/2, maze[0].count/2-centerSize/2-1)
+        return maze
     }
     
     private func createPath(maze: [[Bool]], x: Int, y: Int) -> [[Bool]] {
@@ -45,10 +46,14 @@ class MazeGenerator {
         return newMaze
     }
     
-    private func createStartAndEnd(maze: [[Bool]]) -> [[Bool]] {
+    private func createCenter(maze: [[Bool]], centerSize: Int) -> [[Bool]] {
         var newMaze = maze
-        newMaze[1][0] = false
-        newMaze[maze.count-2][maze[0].count-1] = false
+        for x in 0 ..< centerSize {
+            for y in 0 ..< centerSize {
+                newMaze[maze.count/2-centerSize/2+x][maze[x].count/2-centerSize/2+y] = false
+            }
+        }
+        
         return newMaze
     }
     
